@@ -17,16 +17,18 @@
                 <label for="subnet_amount">Number of subnets:</label>
                 <input type="number" min="2" max="30" name="subnet_amount" id="subnet_amount" placeholder="2">
             </div>
-            <div id="subnet">
-                <label for="subnet_name">Subnet Name</label>
-                <input type="text" name="subnet_name" id="subnet_name">
-                <label for="subnet_size">Subnet Size</label>
-                <input type="text" name="subnet_size" id="subnet_size">
+            <div>
+                <div id="subnet">
+                    <label for="sub_name">Subnet Name</label>
+                    <input type="text" name="sub_name" id="sub_name" placeholder="A">
+                    <label for="sub_size">Subnet Size</label>
+                    <input type="text" name="sub_size" id="sub_size">
+                </div>
                 <div>
                     <input type="number" min='1' max='30' id='rows' placeholder="1">
                     <input type="button" id="add_rows" value="Add">
                 </div>
-            <div>
+            </div>
             <div>
                 <input type="submit" id='sub' vlaue="Submit">
             </div>

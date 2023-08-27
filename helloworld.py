@@ -13,10 +13,17 @@ def submit():
     subnet_amount=request.forms.get('subnet_amount')
     subnet_name=request.forms.get('subnet_name')
     subnet_size=request.forms.get('subnet_size')
-        
+    
+    dynamic={}
+    s_key=1
+    for key in request.forms.keys():       
+        if key.startswith('sub_name') or key.startswith('sub_size'):
+            print (f'THE KEY IS {key}')
+            dynamic[key]=request.forms[key]
+            print (f'THE DYNAMIC IS {dynamic[key]}')
     
     
-    return template('submit',init=init,slash=slash,subnet_amount=subnet_amount,subnet_name=subnet_name,subnet_size=subnet_size)
+    return template('submit',init=init,slash=slash,subnet_amount=subnet_amount,subnet_name=subnet_name,subnet_size=subnet_size,dynamic=dynamic)
 
 @app.route('/static/<filename:path>')
 def server_static(filename):
