@@ -15,15 +15,22 @@ def submit():
     subnet_size=request.forms.get('subnet_size')
     
     dynamic={}
-    s_key=1
+
     for key in request.forms.keys():       
         if key.startswith('sub_name') or key.startswith('sub_size'):
-            print (f'THE KEY IS {key}')
             dynamic[key]=request.forms[key]
-            print (f'THE DYNAMIC IS {dynamic[key]}')
+            
+    subnets = {}
+
+    for key, value in dynamic.items():
+        if key.startswith('sub_name-'):
+            index = int(key.split('-')[1])
+            sub_dict = {'sub_name': value, 'sub_size': dynamic[f'sub_size-{index}']}
+            subnets[index] = sub_dict
+
+    print(f'THE FORMATTED DICT IS {subnets}')
     
-    
-    return template('submit',init=init,slash=slash,subnet_amount=subnet_amount,subnet_name=subnet_name,subnet_size=subnet_size,dynamic=dynamic)
+    return template('submit',init=init,slash=slash,subnet_amount=subnet_amount,subnet_name=subnet_name,subnet_size=subnet_size,subnets=subnets)
 
 @app.route('/static/<filename:path>')
 def server_static(filename):

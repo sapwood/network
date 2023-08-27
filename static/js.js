@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     
 
-    var number=0
+    var number=1
     $('#add_rows').click(function(){
         
         var rows=parseInt($('#rows').val());

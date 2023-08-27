@@ -20,9 +20,9 @@
             <div>
                 <div id="subnet">
                     <label for="sub_name">Subnet Name</label>
-                    <input type="text" name="sub_name" id="sub_name" placeholder="A">
+                    <input type="text" name="sub_name-0" id="sub_name" placeholder="A">
                     <label for="sub_size">Subnet Size</label>
-                    <input type="text" name="sub_size" id="sub_size">
+                    <input type="text" name="sub_size-0" id="sub_size">
                 </div>
                 <div>
                     <input type="number" min='1' max='30' id='rows' placeholder="1">
