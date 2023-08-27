@@ -1,4 +1,5 @@
 from bottle import Bottle, run, template, static_file, error, request
+import math
 app=Bottle()
 
 @app.route('/')
@@ -28,9 +29,25 @@ def submit():
             sub_dict = {'sub_name': value, 'sub_size': dynamic[f'sub_size-{index}']}
             subnets[index] = sub_dict
 
-    print(f'THE FORMATTED DICT IS {subnets}')
+    sorted_result = sorted(subnets.items(), key=lambda item: (-int(item[1]['sub_size']), item[0]))
+
+    subnets = {index: sub_dict for index, (_, sub_dict) in enumerate(sorted_result, start=1)}
+    for key in subnets:
+        size=int(subnets[key]['sub_size'])
+        fac=math.ceil(math.log2(size))
+        range=math.pow(2,fac)
+        if range <= size+2:
+            fac+=1
+        
+        
+
+        
+
+
+
+
     
-    return template('submit',init=init,slash=slash,subnet_amount=subnet_amount,subnet_name=subnet_name,subnet_size=subnet_size,subnets=subnets)
+    return template('submit',init=init,slash=slash,subnet_amount=subnet_amount,subnets=subnets)
 
 @app.route('/static/<filename:path>')
 def server_static(filename):
