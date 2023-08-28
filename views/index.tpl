@@ -13,10 +13,7 @@
                 <input type="text" name="init_network" id="init_network" placeholder="192.168.1.0">
                 <input type="number" min="1" max="32" name="init_slash" placeholder="24">
             </div>
-            <div>
-                <label for="subnet_amount">Number of subnets:</label>
-                <input type="number" min="2" max="30" name="subnet_amount" id="subnet_amount" placeholder="2">
-            </div>
+
             <div>
                 <div id="subnet">
                     <label for="sub_name">Subnet Name</label>
