@@ -29,6 +29,7 @@ def submit():
             sub_dict = {'sub_name': value, 'sub_size': dynamic[f'sub_size-{index}']}
             subnets[index] = sub_dict
 
+    #Sort the dict in descending order
     sorted_result = sorted(subnets.items(), key=lambda item: (-int(item[1]['sub_size']), item[0]))
     subnets = {index: sub_dict for index, (_, sub_dict) in enumerate(sorted_result, start=1)}
 
@@ -43,7 +44,7 @@ def submit():
         if range <= size+2:
             fac+=1
         
-        usable_address=math.pow(2,fac)-2
+        usable_address=int(math.pow(2,fac)-2)
         
         slash=32-fac
         
