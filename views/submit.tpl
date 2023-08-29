@@ -4,12 +4,12 @@
 
 <div>
     <div class="table">
-        <div class="cell">Subnet Name</div>
-        <div class="cell">Network Address</div>
-        <div class="cell">Subnet Mask</div>
-        <div class="cell">First Address</div>
-        <div class="cell">Last Address</div>
-        <div class="cell">Usable</div>
+        <div class="cell head">Subnet Name</div>
+        <div class="cell head">Network Address</div>
+        <div class="cell head">Subnet Mask</div>
+        <div class="cell head">First Address</div>
+        <div class="cell head">Last Address</div>
+        <div class="cell head">Usable</div>
 
         %for key in subnet_res:
             <div class="cell">{{key}}</div>

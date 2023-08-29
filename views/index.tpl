@@ -10,8 +10,8 @@
          
         <form  id="myform">
             <div class="two-col">
-                <label for="init_network" class="cell">Initial Network Address</label>
-                <label for="init_slash" class="cell">Slash Notation</label>
+                <label for="init_network" class="cell head">Initial Network Address</label>
+                <label for="init_slash" class="cell head">Slash Notation</label>
                 <input type="text" class="cell" name="init_network" id="init_network" value="192.168.1.0">
                 <input type="number" class="cell" min="1" max="32" name="init_slash" value="24">
 
@@ -19,9 +19,9 @@
 
             <div>
                 <div id="subnet">
-                    <label for="sub_name" class="cell">Subnet Name</label>
+                    <label for="sub_name" class="cell head">Subnet Name</label>
                     
-                    <label for="sub_size" class="cell">Subnet Size</label>
+                    <label for="sub_size" class="cell head">Subnet Size</label>
                     <input type="text" name="sub_name-0" id="sub_name" class="cell" value="A">
                     <input type="text" name="sub_size-0" id="sub_size" class="cell" value="20">
                 </div>
