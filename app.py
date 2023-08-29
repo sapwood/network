@@ -49,7 +49,7 @@ def submit():
         slash=32-fac
         
         if first_iteration:
-            
+           
             network=ipaddress.IPv4Network(f'{init}/{slash}')
             subnet_size = 2 ** (32 - slash)
             next_subnet_network_address = ipaddress.IPv4Address(int(network.network_address) + subnet_size)

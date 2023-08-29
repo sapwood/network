@@ -9,26 +9,29 @@
 
          
         <form  id="myform">
-            <div>
-                <label for="init_network">Initial Network Address</label>
-                <input type="text" name="init_network" id="init_network" value="192.168.1.0">
-                <input type="number" min="1" max="32" name="init_slash" value="24">
+            <div class="two-col">
+                <label for="init_network" class="cell">Initial Network Address</label>
+                <label for="init_slash" class="cell">Slash Notation</label>
+                <input type="text" class="cell" name="init_network" id="init_network" value="192.168.1.0">
+                <input type="number" class="cell" min="1" max="32" name="init_slash" value="24">
+
             </div>
 
             <div>
                 <div id="subnet">
-                    <label for="sub_name">Subnet Name</label>
-                    <input type="text" name="sub_name-0" id="sub_name" value="A">
-                    <label for="sub_size">Subnet Size</label>
-                    <input type="text" name="sub_size-0" id="sub_size" value="20">
+                    <label for="sub_name" class="cell">Subnet Name</label>
+                    
+                    <label for="sub_size" class="cell">Subnet Size</label>
+                    <input type="text" name="sub_name-0" id="sub_name" class="cell" value="A">
+                    <input type="text" name="sub_size-0" id="sub_size" class="cell" value="20">
                 </div>
                 <div>
-                    <input type="number" min='1' max='25' id='rows' value="1">
-                    <input type="button" id="add_rows" value="Add">
+                    <input type="number" min='1' max='25' id='rows' value="1" >
+                    <input type="button" id="add_rows" value="Add New Subnet" class="bt">
                 </div>
             </div>
             <div>
-                <input type="submit" id='sub' vlaue="Submit">
+                <input type="submit" id='sub' vlaue="Submit" class="bt">
             </div>
         </form>
         <div id="result"></div>
