@@ -5,30 +5,24 @@ div{
 
 .bt{
 
-    background-color: #13AA52;
-    border: #0F8E46;
-    border-radius: 5px;
+    background-color: dodgerblue;
     
+    border-radius: 5px;
+    border: none; 
     color:#fff;
     padding: 0.8em 3em;
     cursor: pointer;
-    box-shadow: 1px 1px 5px #18964b;
+    box-shadow: 1px 1px 5px dodgerblue;
     transition: box-shadow 0.2s;
  
 }
 
-#add_rows{
 
-    background-color: #85a893;
-    box-shadow: 1px 1px 5px #446b54;
-    margin-left: 1em;
-    
-
-}
 
 .bt:hover{
-    box-shadow: 3px 3px 10px #0A5829;
+    box-shadow: 3px 3px 10px royalblue;
     transform: scale(1.05,1.05);
+    background-color: RoyalBlue;
 
 }
 
@@ -43,7 +37,7 @@ div{
 #subnet{
 
     display: grid;
-    grid-template-columns:repeat(2, 20vw); ;
+    grid-template-columns:repeat(3, 15vw); ;
 }
 
 .two-col{
@@ -68,3 +62,19 @@ input#rows{
 
     padding: 0.5em 2em;
 }
+
+
+.delete_bt{
+
+    background-color: DodgerBlue; 
+    border-top: white;
+    color: white; 
+    padding: 0.5em 1em; 
+    font-size: 1em;
+    cursor: pointer; 
+
+}
+
+.delete_bt:hover {
+    background-color: RoyalBlue;
+  }

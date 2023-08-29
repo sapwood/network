@@ -46,6 +46,19 @@ $(document).ready(function(){
                 sub_size.className="cell";
                 sub_size.required=true;
 
+                var delete_button=document.createElement('button');
+                delete_button.className="delete_bt cell";
+                delete_button.type="button";
+                delete_button.id='remove-'+number;
+                var icon=document.createElement('i');
+                icon.className="fa-solid fa-trash-can";
+                
+                delete_button.append(icon);
+                delete_button.append(' Remove');
+                
+
+
+
                 // newDiv.append(sub_name);
                 // newDiv.append(sub_size);
                 number++;
@@ -53,12 +66,29 @@ $(document).ready(function(){
                 
                 $('#subnet').append(sub_name);
                 $('#subnet').append(sub_size);
+                $('#subnet').append(delete_button);
 
             };
         };
     });
 
+
+
 });
+
+$(document).on('click', '.delete_bt', function(){
+    var bt_id=$(this).attr('id');
+    console.log(bt_id);
+    var num=bt_id.split('-')[1];
+    console.log(num);
+    var delete_name=$('input[name="sub_name-'+num+'"]');
+    var delete_size=$('input[name="sub_size-'+num+'"]');
+    delete_name.remove();
+    delete_size.remove();
+    $(this).remove()
+});
+
+
 
 // document.addEventListener('DOMContentLoaded',function(){
 //     var subnet=document.getElementById('subnet');
