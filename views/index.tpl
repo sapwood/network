@@ -3,6 +3,7 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="/static/js.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
 
