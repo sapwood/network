@@ -14,8 +14,10 @@ $(document).ready(function(){
 
     
 
-    var number=1
+    var number=1;
+    sub_letter='A';
     $('#add_rows').click(function(){
+        
         
         var rows=parseInt($('#rows').val());
 
@@ -28,6 +30,10 @@ $(document).ready(function(){
                 var sub_name=document.createElement('input');
                 sub_name.type='text';
                 sub_name.name='sub_name-'+number;
+                
+                var code=sub_letter.charCodeAt(0);
+                sub_letter=String.fromCharCode(code+1);
+                sub_name.value=sub_letter;
                 
                 
                 var sub_size=document.createElement('input');

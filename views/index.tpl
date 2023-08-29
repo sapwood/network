@@ -23,7 +23,7 @@
                     <input type="text" name="sub_size-0" id="sub_size" value="20">
                 </div>
                 <div>
-                    <input type="number" min='1' max='30' id='rows' value="1">
+                    <input type="number" min='1' max='25' id='rows' value="1">
                     <input type="button" id="add_rows" value="Add">
                 </div>
             </div>
