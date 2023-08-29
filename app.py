@@ -19,7 +19,9 @@ def submit():
 
     for key in request.forms.keys():       
         if key.startswith('sub_name') or key.startswith('sub_size'):
-            dynamic[key]=request.forms[key]
+            value=request.forms[key]
+            
+            dynamic[key]=value
             
     subnets = {}
 

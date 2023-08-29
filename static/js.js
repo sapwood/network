@@ -2,6 +2,8 @@ $(document).ready(function(){
     $('#myform').submit(function(event){
         event.preventDefault();
         var formData = $("#myform").serialize();
+        var network=document.getElementById('init_network');
+        asIPv4(network);
         $.ajax({
             type:'POST',
             url:'/submit',
@@ -35,12 +37,14 @@ $(document).ready(function(){
                 var code=sub_letter.charCodeAt(0);
                 sub_letter=String.fromCharCode(code+1);
                 sub_name.value=sub_letter;
+                sub_name.required=true;
                 
                 
                 var sub_size=document.createElement('input');
-                sub_size.type='text';
+                sub_size.type='number';
                 sub_size.name='sub_size-'+number;
                 sub_size.className="cell";
+                sub_size.required=true;
 
                 // newDiv.append(sub_name);
                 // newDiv.append(sub_size);
@@ -53,6 +57,7 @@ $(document).ready(function(){
             };
         };
     });
+
 });
 
 // document.addEventListener('DOMContentLoaded',function(){
