@@ -14,6 +14,8 @@ def submit():
     init_slash=request.forms.get('init_slash')
     subnet_name=request.forms.get('subnet_name')
     subnet_size=request.forms.get('subnet_size')
+
+    print (f'First SLASH is {init_slash}')
     
     dynamic={}
 
@@ -38,7 +40,7 @@ def submit():
 
     first_iteration=True
     subnet_res={}
-
+    err=''
     for key in subnets:
         size=int(subnets[key]['sub_size'])
         fac=math.ceil(math.log2(size))
@@ -52,13 +54,19 @@ def submit():
         
         if first_iteration:
            
-            network=ipaddress.IPv4Network(f'{init}/{slash}')
+            try:
+                network=ipaddress.IPv4Network(f'{init}/{slash}')
+
+            except ValueError as e:
+               err=f'The network address or slash is not correct. {e}'
+               break
+
             subnet_size = 2 ** (32 - slash)
             next_subnet_network_address = ipaddress.IPv4Address(int(network.network_address) + subnet_size)
             first_iteration=False
-
-
+               
         else:
+           
             network=ipaddress.IPv4Network(f'{next_subnet_network_address}/{slash}')
             subnet_size = 2 ** (32 - slash)
             next_subnet_network_address = ipaddress.IPv4Address(int(network.network_address) + subnet_size)
@@ -71,15 +79,9 @@ def submit():
 
 
         subnet_res[subnets[key]['sub_name']]={'net_address':net_address,'mask':mask,'first_address':first_address,'last_address':last_address,'usable':usable_address}
-        
 
-        
-
-
-
-
-    
-    return template('submit',init=init,slash=init_slash,subnet_res=subnet_res)
+    print (f'FINAL SLASH is {init_slash}')
+    return template('submit',init=init,slash=init_slash,subnet_res=subnet_res,err=err)
 
 @app.route('/static/<filename:path>')
 def server_static(filename):

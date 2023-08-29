@@ -16,7 +16,7 @@
                 <label for="init_network" class="cell head">Initial Network Address</label>
                 <label for="init_slash" class="cell head">Slash Notation</label>
                 <input type="text" class="cell" name="init_network" id="init_network" value="192.168.1.0" required>
-                <input type="number" class="cell" min="1" max="32" id="init_slash" value="24" required>
+                <input type="number" class="cell" min="1" max="32" name="init_slash" id="init_slash" value="24" required>
 
             </div>
 
