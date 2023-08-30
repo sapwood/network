@@ -15,7 +15,7 @@ def submit():
     subnet_name=request.forms.get('subnet_name')
     subnet_size=request.forms.get('subnet_size')
 
-    print (f'First SLASH is {init_slash}')
+   
     
     dynamic={}
 
@@ -80,7 +80,7 @@ def submit():
 
         subnet_res[subnets[key]['sub_name']]={'net_address':net_address,'mask':mask,'first_address':first_address,'last_address':last_address,'usable':usable_address}
 
-    print (f'FINAL SLASH is {init_slash}')
+    
     return template('submit',init=init,slash=init_slash,subnet_res=subnet_res,err=err)
 
 @app.route('/static/<filename:path>')

@@ -4,6 +4,7 @@
 
 <div>
     % if len(subnet_res)!=0:
+
         <div class="table">
             <div class="cell head">Subnet Name</div>
             <div class="cell head">Network Address</div>
@@ -22,6 +23,8 @@
                 <div class="cell">{{subnet_res[key]['usable']}}</div>
             %end
         </div>
+
+
     %else:
         %if len(err)!=0:
         <div class="error-msg">

@@ -90,27 +90,5 @@ $(document).on('click', '.delete_bt', function(){
 
 
 
-// document.addEventListener('DOMContentLoaded',function(){
-//     var subnet=document.getElementById('subnet');
-//     var add_button=document.getElementById('add_rows');
-//     var number=0
-    
 
-//     add_button.addEventListener('click',function(){
 
-//         var rows=parseInt(document.getElementById('rows').value)
-//         if (!(isNaN(rows))){
-//             for (var i=0; i<rows;i++){
-                
-//                 var newRow=document.createElement('input');
-//                 newRow.type='text';
-//                 newRow.name='test'+number;
-//                 subnet.appendChild(newRow);
-//                 number++;
-//             };
-//         };
-        
-
-//     });
-    
-// });

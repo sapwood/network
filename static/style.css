@@ -37,13 +37,13 @@ div{
 #subnet{
 
     display: grid;
-    grid-template-columns:repeat(3, 15vw); ;
+    grid-template-columns:repeat(3, 20vw); ;
 }
 
 .two-col{
 
     display: grid;
-    grid-template-columns:repeat(2, 20vw); ;
+    grid-template-columns:repeat(2, 30vw); ;
 }
 
 .cell{
@@ -86,3 +86,4 @@ input#rows{
     background-color: #FFBABA;
 
   }
+
