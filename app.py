@@ -1,27 +1,29 @@
-from bottle import Bottle, run, template, static_file, error, request
+from flask import Flask, request ,render_template
 import math
 import ipaddress
-app=Bottle()
 
-@app.route('/')
-def index():
-    return template('index')
+app=Flask(__name__)
 
-@app.route('/submit', method='POST')
+@app.get('/')
+def hello():
+	return render_template('index.html')
+
+
+@app.post('/submit')
 def submit():
          
-    init=request.forms.get('init_network')
-    init_slash=request.forms.get('init_slash')
-    subnet_name=request.forms.get('subnet_name')
-    subnet_size=request.forms.get('subnet_size')
+    init=request.form['init_network']
+    init_slash=request.form['init_slash']
+    subnet_name=request.form['sub_name-0']
+    subnet_size=request.form['sub_size-0']
 
    
     
     dynamic={}
 
-    for key in request.forms.keys():       
+    for key in request.form:       
         if key.startswith('sub_name') or key.startswith('sub_size'):
-            value=request.forms[key]
+            value=request.form[key]
             
             dynamic[key]=value
             
@@ -81,15 +83,13 @@ def submit():
         subnet_res[subnets[key]['sub_name']]={'net_address':net_address,'mask':mask,'first_address':first_address,'last_address':last_address,'usable':usable_address}
 
     
-    return template('submit',init=init,slash=init_slash,subnet_res=subnet_res,err=err)
-
-@app.route('/static/<filename:path>')
-def server_static(filename):
-    return static_file(filename,root='./static')
-
-@error(404)
-def error404(error):
-    return 'Nothing here. ERROR 404'
+    return render_template('submit.html',init=init,slash=init_slash,subnet_res=subnet_res,err=err)
 
 
-run(app,host='localhost', port=8080, debug=True)
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('error.html'), 404
+
+app.run(host='localhost', port=5000, debug=True)
