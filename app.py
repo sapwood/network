@@ -14,8 +14,8 @@ def submit():
          
     init=request.form['init_network']
     init_slash=request.form['init_slash']
-    subnet_name=request.form['sub_name-0']
-    subnet_size=request.form['sub_size-0']
+    # subnet_name=request.form['sub_name-0']
+    # subnet_size=request.form['sub_size-0']
 
    
     
