@@ -12,6 +12,10 @@ $(document).ready(function(){
                 $('#result').html(response);
             }
         });
+
+        $('html, body').animate({
+            scrollTop: $("#result").offset().top
+         }, 1000);
     });
 
     
