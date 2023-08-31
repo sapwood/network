@@ -26,7 +26,7 @@
 
 
     {% else %}
-        {% if len(err)!=0 %}
+        {% if err|length !=0 %}
         <div class="error-msg">
             <i class="fa fa-times-circle"></i>
             {{err}}
