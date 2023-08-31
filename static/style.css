@@ -104,5 +104,63 @@ input#rows{
   
 
   /*--- FOR QUIZ PAGE  ----*/
+.level-container{
 
- 
+    padding: 10vw;
+}
+ .level{
+
+    margin: 0 0 10vw 0;
+    padding: 5vw;
+    background-color: cadetblue;
+    border-radius: 2vw;
+    position: relative;
+    overflow: visible;
+ }
+
+.level:nth-of-type(1){
+
+    background: linear-gradient(146deg, rgba(255,113,154,1) 0%, rgba(255,197,129,1) 100%);
+}
+
+.level:nth-of-type(2){
+
+    background: linear-gradient(146deg, rgba(45,97,205,1) 0%, rgba(95,202,248,1) 100%);
+}
+
+.level:nth-of-type(3){
+
+    background: linear-gradient(146deg, rgba(226,71,191,1) 0%, rgba(247,178,165,1) 100%);
+}
+
+.level-image img{
+
+    position: absolute;
+    width:30vw;
+    height: auto;
+    top:-100px;
+    right:-10px;
+    /* transform: rotate(25deg); */
+}
+ .level-icon{
+
+    display: inline-block;
+    border: 1px solid #ccc;
+ }
+
+ .level-content{
+
+    font-family: fantasy;
+    color:#fff;
+ }
+
+ .level-title{
+
+    font-size: 3vw;
+    margin: 1vw 0;
+ }
+
+ .level-text{
+    font-size: 5vw;
+    margin:1vw 0;
+ }
