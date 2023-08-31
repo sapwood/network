@@ -4,52 +4,57 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <script src="https://kit.fontawesome.com/cc028eb60f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     </head>
     <body>
         <div class="container">
             <div class="title">CCNA Mock Test</div>
             <div class="level-container">
-                <div class="level">
-                    <div class="level-icon">
-                        <img src="{{ url_for('static', filename='graduation-cap.png')}}">
+                <a href="{{url_for('questions',levels='beginner')}}">
+                    <div class="level">
+                        <div class="level-icon">
+                            <img src="{{ url_for('static', filename='graduation-cap.png')}}">
+                        </div>
+                        <div class="level-image">
+                            <img src="{{ url_for('static', filename='education.png')}}">
+                        </div>
+                        <div class="level-content">
+                            <div class="level-title">Level 1</div>
+                            <div class="level-text">Newbie</div>
+                        </div>
+                        
                     </div>
-                    <div class="level-image">
-                        <img src="{{ url_for('static', filename='education.png')}}">
+                </a>
+                <a href="{{url_for('questions',levels='intermediate')}}">
+                    <div class="level">
+                        <div class="level-icon">
+                            <img src="{{ url_for('static', filename='id-card.png')}}">
+                        </div>
+                        <div class="level-image">
+                            <img src="{{ url_for('static', filename='career.png')}}">
+                        </div>
+                        <div class="level-content">
+                            <div class="level-title">Level 2</div>
+                            <div class="level-text">Intermediate</div>
+                        </div>
+                        
                     </div>
-                    <div class="level-content">
-                        <div class="level-title">Level 1</div>
-                        <div class="level-text">Newbie</div>
+                </a>
+                <a href="{{url_for('questions',levels='Advanced')}}">
+                    <div class="level">
+                        <div class="level-icon">
+                            <img src="{{ url_for('static', filename='certificate.png')}}">
+                        </div>
+                        <div class="level-image">
+                            <img src="{{ url_for('static', filename='rating.png')}}">
+                        </div>
+                        <div class="level-content">
+                            <div class="level-title">Level 3</div>
+                            <div class="level-text">Advanced</div>
+                        </div>
+                        
                     </div>
-                    
-                </div>
-                <div class="level">
-                    <div class="level-icon">
-                        <img src="{{ url_for('static', filename='id-card.png')}}">
-                    </div>
-                    <div class="level-image">
-                        <img src="{{ url_for('static', filename='career.png')}}">
-                    </div>
-                    <div class="level-content">
-                        <div class="level-title">Level 2</div>
-                        <div class="level-text">Intermediate</div>
-                    </div>
-                    
-                </div>
-                <div class="level">
-                    <div class="level-icon">
-                        <img src="{{ url_for('static', filename='certificate.png')}}">
-                    </div>
-                    <div class="level-image">
-                        <img src="{{ url_for('static', filename='rating.png')}}">
-                    </div>
-                    <div class="level-content">
-                        <div class="level-title">Level 3</div>
-                        <div class="level-text">Advanced</div>
-                    </div>
-                    
-                </div>
+                </a>
             </div>
         </div>
  

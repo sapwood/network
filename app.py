@@ -11,7 +11,9 @@ def hello():
 @app.get('/quiz')
 def index():
     return render_template('quiz_index.html')
-
+@app.get('/quiz/questions/<levels>')
+def questions(levels):
+    return render_template('questions.html',levels=levels)
 
 @app.post('/submit')
 def submit():

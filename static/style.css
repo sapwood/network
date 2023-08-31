@@ -104,10 +104,29 @@ input#rows{
   
 
   /*--- FOR QUIZ PAGE  ----*/
+
+
+.container .title{
+
+    text-align: center;
+    font-family: fantasy;
+    font-size: 5vw;
+    margin-bottom: 0;
+    color: #333;
+} 
+
 .level-container{
 
     padding: 10vw;
 }
+
+
+
+.level-container a{
+
+    text-decoration: none;
+}
+
  .level{
 
     margin: 0 0 10vw 0;
@@ -170,4 +189,54 @@ input#rows{
  .level-text{
     font-size: 5vw;
     margin:1vw 0;
+ }
+
+
+ /* CSS FOR QUESTIONS PAGE */
+
+ .q_container{
+
+    background: linear-gradient(146deg, rgba(62,107,201,1) 0%, rgba(8,154,255,1) 100%);
+    padding: 5vw;
+    color:white;
+    font-family: sans-serif;
+ }
+
+ .q_title{
+
+    width:80%;
+    margin:auto;
+ }
+
+.q_title .question{
+
+    font-size: 3vw;
+    margin:0;
+}
+
+ .answers{
+
+    width: 80%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+ }
+
+ .answers .option{
+
+    flex: 1;
+    background-color: white;
+    color: #888;
+    padding: 4vw;
+    border: 1px solid #a6c3ff;
+    text-align: center;
+    font-weight: 900;
+ }
+
+ .option:hover{
+
+    background-color: #c2d74c;
+    cursor: pointer;
+    color:white;
  }
