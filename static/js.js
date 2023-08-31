@@ -24,7 +24,7 @@ $(document).ready(function(){
         var rows=parseInt($('#rows').val());
 
         if (!(isNaN(rows))){
-            console.log('NOT NULL');
+            
             for (var i=0; i<rows;i++){
                 // var newDiv=document.createElement('div');
                 
@@ -78,9 +78,9 @@ $(document).ready(function(){
 
 $(document).on('click', '.delete_bt', function(){
     var bt_id=$(this).attr('id');
-    console.log(bt_id);
+    
     var num=bt_id.split('-')[1];
-    console.log(num);
+    
     var delete_name=$('input[name="sub_name-'+num+'"]');
     var delete_size=$('input[name="sub_size-'+num+'"]');
     delete_name.remove();
