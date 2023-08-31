@@ -113,7 +113,7 @@ input#rows{
     margin: 0 0 10vw 0;
     padding: 5vw;
     background-color: cadetblue;
-    border-radius: 2vw;
+    border-radius: 3vw;
     position: relative;
     overflow: visible;
  }
@@ -145,8 +145,14 @@ input#rows{
  .level-icon{
 
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 0.2vw solid #fff;
+    border-radius: 1vw;
+    padding: 1vw;
  }
+.level-icon img{
+
+    width:3vw;
+}
 
  .level-content{
 
@@ -156,8 +162,9 @@ input#rows{
 
  .level-title{
 
-    font-size: 3vw;
+    font-size: 2vw;
     margin: 1vw 0;
+    font-family: sans-serif;
  }
 
  .level-text{
