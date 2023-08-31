@@ -138,8 +138,8 @@ input#rows{
     position: absolute;
     width:30vw;
     height: auto;
-    top:-100px;
-    right:-10px;
+    top:-10vw;
+    right:-1vw;
     /* transform: rotate(25deg); */
 }
  .level-icon{
