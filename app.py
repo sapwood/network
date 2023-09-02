@@ -15,6 +15,10 @@ def index():
 def questions(levels):
     return render_template('questions.html',levels=levels)
 
+@app.post('/checkanswer')
+def checka_answer():
+    answer=request.form['answer']
+    return render_template('checkanswer.html')
 @app.post('/submit')
 def submit():
          

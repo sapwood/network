@@ -92,7 +92,19 @@ $(document).on('click', '.delete_bt', function(){
     $(this).remove()
 });
 
-
+$(document).on('click','.option',function(event){
+    event.preventDefault();
+    var answer=$(this).text();
+    console.log(answer);
+    $.ajax({
+        type:'POST',
+        url:'/checkanswer',
+        data:{answer:answer},
+        success:function(response){
+            $('.result').html(response);
+        }
+    });
+});
 
 
 
