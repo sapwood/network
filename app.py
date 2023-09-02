@@ -18,7 +18,7 @@ def questions(levels):
 @app.post('/checkanswer')
 def checka_answer():
     answer=request.form['answer']
-    return render_template('checkanswer.html')
+    return render_template('checkanswer.html',answer=answer)
 @app.post('/submit')
 def submit():
          
