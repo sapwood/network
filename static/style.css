@@ -235,9 +235,9 @@ input#rows{
     
  }
 
- .option:focus{
-    background: linear-gradient(180deg, rgba(243,252,95,1) 0%, rgba(224,233,80,1) 31%, rgba(200,207,72,1) 50%, rgba(196,205,63,1) 57%, rgba(213,221,77,1) 100%);
+ .option:hover{
+
+    background-color: #c2d74c;
     cursor: pointer;
     color:white;
  }
-
