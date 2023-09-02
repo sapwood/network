@@ -8,18 +8,24 @@
         <script src="{{ url_for('static', filename='js.js') }}"></script> 
     </head>
     <body>
-        <div class="q_container">
-            <div class="q_title">
-                <div class="q_num">Question 5 of 10</div>
-                <div class="question">What is the correct subnet mask?</div>
+        <div class="flip_card">
+            <div class="flip_inner">
+                <div class="q_container">
+                    <div class="q_title">
+                        <div class="q_num">Question 5 of 10</div>
+                        <div class="question">What is the correct subnet mask?</div>
+                    </div>
+                    <div class="answers">
+                        <div class="option">127.0.0.1</div>
+                        <div class="option">192.0.0.1</div>
+                        <div class="option">255.255.0.0</div>
+                        <div class="option">255.255.0.0</div>
+                    </div>
+                </div>
+                <div class="checkanswer">
+                    <div>ANSWER</div>
+                </div>
             </div>
-            <div class="answers">
-                <div class="option">127.0.0.1</div>
-                <div class="option">192.0.0.1</div>
-                <div class="option">255.255.0.0</div>
-                <div class="option">255.255.0.0</div>
-            </div>
-
         </div>
         <div class="result"></div>
     </body>

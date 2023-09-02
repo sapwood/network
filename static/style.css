@@ -194,13 +194,21 @@ input#rows{
 
  /* CSS FOR QUESTIONS PAGE */
 
+
+
+
  .q_container{
 
+    
     background: linear-gradient(146deg, rgba(62,107,201,1) 0%, rgba(8,154,255,1) 100%);
     padding: 5vw;
     color:white;
     font-family: sans-serif;
+    
  }
+
+
+
 
  .q_title{
 
