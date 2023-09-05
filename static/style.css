@@ -222,6 +222,25 @@ input#rows{
     margin:0;
 }
 
+.answer_title{
+    width:80%;
+    margin:auto;
+    display: inline-block;
+
+}
+.answer_title .question{
+
+    font-size: 3vw;
+    margin:0;
+}
+
+.nextpage{
+
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
  .answers{
 
     width: 80%;
