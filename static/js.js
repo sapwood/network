@@ -95,13 +95,13 @@ $(document).on('click', '.delete_bt', function(){
 $(document).on('click','.option',function(event){
     event.preventDefault();
     var answer=$(this).text();
-    console.log(answer);
+    
     $.ajax({
         type:'POST',
         url:'/checkanswer',
         data:{answer:answer},
         success:function(response){
-            $('.result').html(response);
+            $('.q_container').html(response);
         }
     });
 });

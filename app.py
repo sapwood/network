@@ -19,6 +19,7 @@ def questions(levels):
 def checka_answer():
     answer=request.form['answer']
     return render_template('checkanswer.html',answer=answer)
+
 @app.post('/submit')
 def submit():
          
